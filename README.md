@@ -3,5 +3,5 @@ This repository is a collection of all my solutions I submitted at [Frontend Men
 
 ## Live Previews of my solutions
  - Four card feature section
-   - [challenge-01 (Profile  Card Component)](#)
+   - [challenge-01 (Profile  Card Component)](https://frontend-mentor-challanges-two.vercel.app/)
  
