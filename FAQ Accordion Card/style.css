@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+
+:root{
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+}
+
+
+body{
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#container{
+    width: 930px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+
+/********************************IMAGE CONTAINER***************************/
+
+
+.img-container{
+    position: relative;
+    padding: 50px 0;
+    z-index: 0;
+}
+.sec-img{
+    position: absolute;
+    top: -300px;
+    left: -580px;
+    z-index: -1;
+    clip: rect(300px, 1000px, 770px, 580px);
+}
+.inner{
+    overflow: hidden;
+}
+.inner picture{
+    margin-left: -80px;
+}
+.outer{
+    position: absolute;
+    top: 190px;
+    left: -90px;
+}
+
+
+/********************************FAQ CONTAINER***************************/
+
+
+.faq-container{
+    padding: 50px;
+    padding-bottom: 20px;
+}
+.faq-container h2{
+    color: hsl(238, 29%, 16%);
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+.faq-container > div{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.faq-container span{
+    float: right;
+    transition: 0.4s;
+}
+label{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    padding-left: 0;
+    color: hsl(237, 12%, 33%);
+    transition: 0.4s;
+}
+label:hover{
+    color: hsl(14, 88%, 65%);
+}
+input{
+    display: none;
+}
+.ans{
+    padding: 5px 0;
+    color: hsl(240, 6%, 50%);
+    font-size: 14px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+input:checked ~ .ans{
+    height: 64px;
+    opacity: 1;
+}
+input:checked ~ label{
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+input:checked ~ label span{
+    transform: rotate(180deg);
+    transition: 0.4s;
+}
+
+footer{
+    position: absolute; 
+    left: 40%; 
+    bottom: 30px;
+}
+.attribution {
+    font-size: 11px;
+    display: block;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/********************************CSS FOR MOBILE***************************/
+
+
+@media (max-width: 890px){
+    #container{
+        max-width: 450px;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 120px;
+    }
+    .img-container{
+        padding: 0;
+        margin: 0 auto;
+        margin-top: -110px;
+    }
+    .inner{
+        overflow: visible;
+    }
+    .outer{
+        display: none;
+    }
+    .sec-img{
+        top: 100px;
+        left: -50px;
+    }
+    .faq-container h2{
+        text-align: center;
+    }
+}
