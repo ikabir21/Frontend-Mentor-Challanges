@@ -7,5 +7,5 @@ This repository is a collection of all my solutions I submitted at [Frontend Men
 - FAQ Accordion Card
    - [challenge-02 (FAQ Accordion Card)](https://faq-accordion-card-four.vercel.app/)
 - Social Proof Section
-   - [challange-03 (Social Proof Section)](#)
+   - [challange-03 (Social Proof Section)](https://social-proof-section-two-mocha.vercel.app/)
  
